@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/cubebotfan/react-components-pages/static/css/main.1e5c348f.css",
+    "main.js": "/cubebotfan/react-components-pages/static/js/main.bdf2c831.js",
+    "static/media/icecream.jpg": "/cubebotfan/react-components-pages/static/media/icecream.6385faf5098acb8e8d81.jpg",
+    "static/media/cake.jpg": "/cubebotfan/react-components-pages/static/media/cake.b213582648a300495b8d.jpg",
+    "static/media/cookies.jpg": "/cubebotfan/react-components-pages/static/media/cookies.4d4285a840e10283f153.jpg",
+    "static/media/muffins.jpg": "/cubebotfan/react-components-pages/static/media/muffins.43184f95f1156c04f52e.jpg",
+    "index.html": "/cubebotfan/react-components-pages/index.html",
+    "main.1e5c348f.css.map": "/cubebotfan/react-components-pages/static/css/main.1e5c348f.css.map",
+    "main.bdf2c831.js.map": "/cubebotfan/react-components-pages/static/js/main.bdf2c831.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1e5c348f.css",
+    "static/js/main.bdf2c831.js"
+  ]
+}
