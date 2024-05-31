@@ -1,0 +1,228 @@
+@charset "utf-8";
+@import url(./reset.css);
+
+:root {
+	--app-background-colour: #f3f4f7;
+
+	--app-header-height: 80px;
+	--app-header-colour: #00B000;
+	--app-header-font-colour: #ffffff;
+
+	--app-footer-height: 60px;
+	--app-footer-colour: #c0c0c0;
+	--app-footer-font-colour: #000000;
+
+	--app-button-primary-colour: #00B000;
+	--app-button-primary-font-colour: #ffffff;
+	--app-button-primary-border-colour: #ffffff00;
+	
+	--app-button-primary-colour-hover: #00CA00;
+	--app-button-primary-font-colour-hover: #ffffff;
+	--app-button-primary-border-colour-hover: #ffffff00;
+
+
+	--app-button-secondary-colour: #5800b0;
+	--app-button-secondary-font-colour: #ffffff;
+	--app-button-secondary-border-colour: #ffffff00;
+
+	--app-button-secondary-colour-hover: #6500ca	;
+	--app-button-secondary-font-colour-hover: #ffffff;
+	--app-button-secondary-border-colour-hover: #ffffff00;
+
+	--app-gallary-background: #E0E0E0;
+
+}
+
+body {
+	background-color: var(--app-background-colour);
+}
+
+.container {
+  width: min(1080px, 100% - 30px);
+  margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+/* Some things only work in flex containers for mysterious reasons. */
+/* Flex vertical behaves similar to the default while having the benefits of being a flex container. */
+.flex-vertical {
+  display: flex;
+	flex-direction: column;
+}
+
+.center {
+  align-items: center;  
+}
+
+a {
+  /* NO */
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  font-size: 0;
+}
+
+
+/* - - - - - - - - - -
+  BLUE LINKS
+  applies the default <a>
+  styles in case they are
+  wanted for some reason
+ - - - - - - - - - - */
+a.bluelink {
+  text-decoration: underline;
+  color: #0000FF;
+}
+
+.app-root {
+	min-height: 100vh;
+}
+
+main {
+	min-height: calc(100vh - var(--app-header-height) - var(--app-footer-height));
+}
+
+/* - - - - - - - - - -
+	HIDDEN ITEMS
+	makes the element
+	invisible until the
+	class is removed
+ - - - - - - - - - - */
+.hide {
+	visibility: hidden;
+}
+
+/* - - - - -
+	HEADER - maybe I should make header have its own css file in the future
+ - - - - - */
+header {
+height: var(--app-header-height);
+background-color: var(--app-header-colour);
+
+/* We want all header elements to inherit these as defaults*/
+color: var(--app-header-font-colour);
+line-height: var(--app-header-height);
+}
+
+header h1 {
+	font-size: 2.8rem;
+}
+
+/* - - - - -
+	FOOTER
+ - - - - - */
+footer {
+	height: var(--app-footer-height);
+	background-color: var(--app-footer-colour);
+	/* Still using this since it's a really cool trick to lock the footer to the bottom of the page,
+	 even if there's not enough height.*/
+	/* Only works in a flex container (you'll want column flex) with the minimum width set to 100vh */
+	margin-top: auto;
+
+	/* footer elements can inherit these as defaults*/
+	color: var(--app-footer-font-colour);
+	line-height: var(--app-footer-height);
+}
+
+footer .footer-copy {
+	font-size: 1.6rem;
+}
+
+/* - - - - -
+	BANNER
+ - - - - - */
+.banner {
+text-align: center;
+}
+
+.banner h2 {
+	font-size: 2.4em;
+}
+
+.banner p {
+	font-size: 1.6em;
+}
+
+.banner .banner-buttons {
+	margin-top:2.8em;
+	margin-bottom:2.8em;
+	display:flex;
+	justify-content: center;
+}
+
+/* - - - - -
+	BUTTONS
+ - - - - - */
+.button {
+	display: block;
+	width: 20em;
+	height:4em;
+	line-height: 4em;
+	border-radius: 15px;
+
+	background-color: var(--app-button-primary-colour);
+	color: var(--app-button-primary-font-colour);
+
+	border: 1px solid var(--app-button-primary-border-colour);
+
+	transition: background-color 200ms linear;
+}
+
+.button.secondary {
+	background-color: var(--app-button-secondary-colour);
+	color: var(--app-button-secondary-font-colour);
+	border-color: var(--app-button-secondary-border-colour);
+
+}
+
+.button:hover {
+	background-color: var(--app-button-primary-colour-hover);
+	color: var(--app-button-primary-font-colour-hover);
+	border-color: var(--app-button-primary-border-colour-hover);
+
+}
+
+.button.secondary:hover {
+	background-color: var(--app-button-secondary-colour-hover);
+	color: var(--app-button-secondary-font-colour-hover);
+	border-color: var(--app-button-secondary-border-colour-hover);
+}
+
+.button + .button {
+	margin-left:2em;
+}
+
+/* - - - - -
+	GALLARY
+ - - - - - */
+
+.gallary-background {
+	background-color: var(--app-gallary-background);
+	padding-top: 4em;
+	padding-bottom: 4em;
+}
+
+.gallary {
+	display: flex;
+	flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gallary .gallary-entry {
+	width:calc(25% - 15px);
+	height:30em;
+  object-fit: cover;
+}
+
+/* - - - - -
+	MISC
+ - - - - - */
+.mt-100 {
+	margin-top: 10em;
+}

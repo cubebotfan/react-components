@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+/* stuffs the gallary to the bottom of the page if possible */
+/* This is to prevent an empty white section from appearing between the gallary and the footer*/
+/* I should make sure to avoid situations like this in the future. Luckily this page looks fine with this fix*/
+.gallary-background {
+	margin-top: auto;
+}
